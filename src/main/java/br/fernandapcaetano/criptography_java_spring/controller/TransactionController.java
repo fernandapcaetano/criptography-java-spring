@@ -14,13 +14,14 @@ import br.fernandapcaetano.criptography_java_spring.dto.TransactionDTO;
 import br.fernandapcaetano.criptography_java_spring.dto.TransactionRequestDTO;
 import br.fernandapcaetano.criptography_java_spring.exception.ResourceNotFoundException;
 import br.fernandapcaetano.criptography_java_spring.service.TransactionService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
+@Tag(name = "Criptografia de transação de conta", description = "Realizando a criptografia em tempo de execução durante a conversão da entidade para a coluna correspondente no banco de dados")
 @RestController
 @RequestMapping("${api.prefix}")
 public class TransactionController {
